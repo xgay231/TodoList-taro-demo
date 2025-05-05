@@ -1,5 +1,6 @@
 import { Button, Input, View } from '@tarojs/components'
 import { useRef, useState } from 'react'
+import './demo.scss'
 
 // 1.需要有一个输入框 用来输入我们todoDesc
 // 2.有一个确认按钮 点击按钮可以添加到todoList中
@@ -23,7 +24,8 @@ export default ()=> {
     {
       todoList.map((item, index) => {
         return <View key={index} className='todo-item'>
-          {item}
+          <View>{item}</View>
+          <View>删除</View>
         </View>
       })
     }
