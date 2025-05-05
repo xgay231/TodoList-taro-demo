@@ -18,7 +18,7 @@ export default ()=> {
   }
 
   return <View>
-    <Input type='text' placeholder='请输入待办事项' ref={InputRef}/>
+    <Input type='text' placeholder='请输入待办事项' ref={InputRef} />
     <Button onClick={onsubmit}>确认添加</Button>
     {
       todoList.map((item, index) => {
