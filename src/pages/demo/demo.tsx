@@ -16,6 +16,7 @@ export default ()=> {
       ...todoList,
       InputRef.current.value,
     ])
+    InputRef.current.value = ''
   }
 
   const onDelete = (index) => {
