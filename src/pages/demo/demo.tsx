@@ -18,6 +18,11 @@ export default ()=> {
     ])
   }
 
+  const onDelete = (index) => {
+    todoList.splice(index, 1)
+    setTodoList([...todoList])
+  }
+
   return <View>
     <Input type='text' placeholder='请输入待办事项' ref={InputRef} />
     <Button onClick={onsubmit}>确认添加</Button>
@@ -25,7 +30,7 @@ export default ()=> {
       todoList.map((item, index) => {
         return <View key={index} className='todo-item'>
           <View>{item}</View>
-          <View>删除</View>
+          <View onClick={()=>{onDelete(index)}}>删除</View>
         </View>
       })
     }
